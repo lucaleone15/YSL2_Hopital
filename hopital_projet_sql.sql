@@ -1,4 +1,4 @@
-
+//salut
 create temp patient(
 id int,
 nom varchar(50)
