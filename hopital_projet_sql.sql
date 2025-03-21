@@ -24,4 +24,3 @@ telephone varchar(30)
 assurance varchar
 sexe enum('Homme', 'Femme', 'Non-binaire')
 );
-// je sais pas
