@@ -1,4 +1,4 @@
-
+-- Patient
 create temp table patient(
 id integer primary key,
 nom varchar(50),
@@ -14,6 +14,7 @@ copy patient(id, nom, prenom, date_naiss, adresse, telephone, assurance, sexe)
 from 'csv\patient.csv'
 WITH CSV HEADER;
 
+--Médecin 
 create temp table medecin(
 id integer primary key,
 nom varchar(50),
@@ -28,6 +29,7 @@ copy medecin(id, nom, prenom, specialite, telephone, sexe, adresse_hopital)
 from 'csv\medecins.csv'
 WITH CSV HEADER;
 
+-- Rendez-vous
 create temp table rdv(
 id integer primary key,
 patient_id integer references patient(id),
@@ -40,6 +42,7 @@ copy rdv(id, patient_id, medecin_id, rdv_date)
 from 'csv\rdv.csv'
 WITH CSV HEADER;
 
+-- Médicament
 create temp table medicament(
 id integer primary key,
 nom varchar,
@@ -51,6 +54,7 @@ copy medicament(id, nom, dosage, med_type)
 from 'csv\medoc.csv'
 WITH CSV HEADER;
 
+-- Prescription
 create temp table prescription(
 id integer primary key,
 rdv_id integer,
