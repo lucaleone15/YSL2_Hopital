@@ -2,11 +2,11 @@
 -- Patient
 create temp table temp_patient(
 id integer,
-nom varchar(50),
-prenom varchar(50),
+nom varchar,
+prenom varchar,
 date_naiss date,
 adresse varchar,
-telephone varchar(30),
+telephone varchar,
 assurance varchar,
 sexe varchar
 );
@@ -19,8 +19,8 @@ DELIMITER ';';
 --Médecin 
 create temp table temp_medecin(
 id integer,
-nom varchar(50),
-prenom varchar(50),
+nom varchar,
+prenom varchar,
 specialite varchar,
 telephone varchar,
 sexe varchar,
