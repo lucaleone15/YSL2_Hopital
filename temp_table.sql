@@ -1,6 +1,7 @@
+-- Active: 1743080852662@@127.0.0.1@5432@hopital
 -- Patient
 create temp table temp_patient(
-id integer primary key,
+id integer,
 nom varchar(50),
 prenom varchar(50),
 date_naiss date,
@@ -11,12 +12,13 @@ sexe varchar
 );
 
 copy temp_patient(id, nom, prenom, date_naiss, adresse, telephone, assurance, sexe)
-from 'csv\patient.csv'
-WITH CSV HEADER;
+from 'csv/patients.csv'
+WITH CSV HEADER
+DELIMITER ';';
 
 --Médecin 
 create temp table temp_medecin(
-id integer primary key,
+id integer,
 nom varchar(50),
 prenom varchar(50),
 specialite varchar,
@@ -26,37 +28,40 @@ adresse_hopital varchar
 );
 
 copy temp_medecin(id, nom, prenom, specialite, telephone, sexe, adresse_hopital)
-from 'csv\medecins.csv'
-WITH CSV HEADER;
+from 'csv/medecins.csv'
+WITH CSV HEADER
+DELIMITER ';';
 
 -- Rendez-vous
 create temp table temp_rdv(
 id integer primary key,
-patient_id integer references patient(id),
-medecin_id integer references medecin(id),
+patient_id integer,
+medecin_id integer,
 rdv_date date,
 motif varchar
 );
 
 copy temp_rdv(id, patient_id, medecin_id, rdv_date)
 from 'csv\rdv.csv'
-WITH CSV HEADER;
+WITH CSV HEADER
+DELIMITER ';';
 
 -- Médicament
 create temp table temp_medicament(
-id integer primary key,
+id integer,
 nom varchar,
 dosage varchar,
 med_type varchar
-)
+);
 
 copy temp_medicament(id, nom, dosage, med_type)
 from 'csv\medoc.csv'
-WITH CSV HEADER;
+WITH CSV HEADER
+DELIMITER ';';
 
 -- Prescription
 create temp table temp_prescription(
-id integer primary key,
+id integer,
 rdv_id integer,
 medicament_id integer,
 duree integer
@@ -64,4 +69,5 @@ duree integer
 
 copy temp_prescription(id, rdv_id, medicament_id, duree)
 from 'csv\prescriptions.csv'
-WITH CSV HEADER;
+WITH CSV HEADER
+DELIMITER ';';
