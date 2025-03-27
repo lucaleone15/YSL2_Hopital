@@ -19,10 +19,10 @@ create temp table temp_medecin(
 id integer primary key,
 nom varchar(50),
 prenom varchar(50),
-specialite enum(Neurologue, Généraliste, Pédiatre, Dermatologue, Psychiatre),
-telephone varchar()
+specialite varchar,
+telephone varchar,
 sexe varchar,
-adresse_hopital varchar()
+adresse_hopital varchar
 );
 
 copy temp_medecin(id, nom, prenom, specialite, telephone, sexe, adresse_hopital)
