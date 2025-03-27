@@ -1,4 +1,4 @@
--- Active: 1743080852662@@127.0.0.1@5432@hopital
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 -- Patient
 create temp table temp_patient(
 id integer,
@@ -12,7 +12,7 @@ sexe varchar
 );
 
 copy temp_patient(id, nom, prenom, date_naiss, adresse, telephone, assurance, sexe)
-from 'csv/patients.csv'
+from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\patients.csv'
 WITH CSV HEADER
 DELIMITER ';';
 
@@ -29,7 +29,7 @@ adresse_hopital varchar
 );
 
 copy temp_medecin(id, nom, prenom, specialite, hopital, telephone, sexe, adresse_hopital)
-from 'csv/medecins'.csv
+from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\medecins.csv'
 WITH CSV HEADER
 DELIMITER ';';
 
