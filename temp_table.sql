@@ -42,7 +42,7 @@ rdv_date date,
 motif varchar
 );
 
-copy temp_rdv(id, patient_id, medecin_id, rdv_date)
+copy temp_rdv(id, patient_id, medecin_id, rdv_date, motif)
 from 'csv\rdv.csv'
 WITH CSV HEADER
 DELIMITER ';';
