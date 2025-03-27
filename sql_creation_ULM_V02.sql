@@ -5,7 +5,7 @@ code_postale varchar(10) not null,
 ville varchar(50) not null,
 etat varchar(50),
 pays varchar(50) not null);
-
+-- test123
 /*creation personne*/
 create type type_sexe as enum ('homme',
 'femme',
