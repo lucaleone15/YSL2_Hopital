@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 /*creation adresse*/
 create table adresse(id serial primary key,
 rue_et_num varchar(100) not null,
