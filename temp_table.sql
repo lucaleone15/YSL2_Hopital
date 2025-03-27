@@ -22,13 +22,14 @@ id integer,
 nom varchar,
 prenom varchar,
 specialite varchar,
+hopital varchar,
 telephone varchar,
 sexe varchar,
 adresse_hopital varchar
 );
 
-copy temp_medecin(id, nom, prenom, specialite, telephone, sexe, adresse_hopital)
-from 'csv/medecins.csv'
+copy temp_medecin(id, nom, prenom, specialite, hopital, telephone, sexe, adresse_hopital)
+from 'csv/medecins'.csv
 WITH CSV HEADER
 DELIMITER ';';
 
