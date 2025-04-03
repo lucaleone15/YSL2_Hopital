@@ -1,3 +1,4 @@
+-- ADRESSE
 create temp table temp_adresse (
     id serial primary key,
     nom VARCHAR(200)
@@ -84,8 +85,7 @@ SELECT DISTINCT
     sexe
 from temp_personne;
 
---select * from personne;
-
+-- ASSURANCE 
 create temp table temp_assurance (
     id serial primary key,
     assurance_nom varchar(60) not null
@@ -122,6 +122,7 @@ from temp_assurance;
 
 --SELECT * from assurance;
 
+-- COMPLEMENTAIRE
 alter table temp_patient add complementaire BOOLEAN;
 
 update temp_patient
