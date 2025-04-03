@@ -8,6 +8,11 @@ SELECT DISTINCT specialite FROM temp_medecin
 
 -- drop table temp_specialisation;
 
+create temp table specialisation (
+    medecin_id INTEGER,
+    specialisation_nom VARCHAR(30) NOT NULL
+);
+
 create table specialisation (
     id SERIAL PRIMARY KEY,
     specialisation_nom VARCHAR(30) NOT NULL
