@@ -4,7 +4,6 @@ UPDATE temp_medecin
 SET specialite = REPLACE(specialite, 'È', 'é')
 WHERE specialite LIKE '%È%';
 */
-SELECT DISTINCT specialite FROM temp_medecin
 
 -- Création table spécialisation
 create table specialisation (
