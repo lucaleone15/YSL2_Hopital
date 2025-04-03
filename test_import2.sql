@@ -1,5 +1,12 @@
 -- Active: 1743080815125@@127.0.0.1@5432@hopital
---POUR LES MÉDICAMENT--
+
+DROP TABLE medicament;
+
+DROP TYPE type_medicament;
+
+DROP TABLE temp_medicament;
+
+--POUR LES MÉDICAMENTS--
 
 create temp table temp_medicament(
 id integer,
@@ -18,12 +25,6 @@ create type type_medicament as enum ('Comprimé',
 'Aérosol',
 'Injection', 
 'Capsule');
-
-DROP TABLE medicament;
-
-DROP TYPE type_medicament;
-
-DROP TABLE temp_medicament;
 
 create table medicament(id serial primary key,
 nom varchar(30) not null,
