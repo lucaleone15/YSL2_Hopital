@@ -1,16 +1,16 @@
-﻿ID MÈdecin;Nom;PrÈnom;SpÈcialitÈ;HÙpital;TÈlÈphone;Sexe;Adresse HÙpital
-2868;Roach;Jesse;Neurologue;Myers Inc;+1-890-985-8481x3632;Homme;Rue des HÙpitaux 10, 1007 Lausanne, Vaud, Suisse
-2044;Short;Oscar;GÈnÈraliste;Kline, Phelps and Kim;001-690-346-1383x079;Homme;Avenue des MÈdecins 5, 1260 Nyon, Vaud, Suisse
-2036;Woods;Teresa;PÈdiatre;Thompson Group;001-480-772-6461;Femme;Place du Centre MÈdical 2, 1400 Yverdon-les-Bains, Vaud, Suisse
-2882;Davis;Ronnie;PÈdiatre;Fowler, Willis and Green;(471)326-1543x72449;Homme;Boulevard des Cliniques 8, 1800 Vevey, Vaud, Suisse
-2439;Cordova;Sarah;GÈnÈraliste;Moore Ltd;631.241.7532x562;Femme;Route des Urgences 12, 1820 Montreux, Vaud, Suisse
-2424;Kennedy;Julie;PÈdiatre;Watts, Franklin and Hunt;855-297-3683x31577;Femme;Chemin de la SantÈ 15, 1040 Echallens, Vaud, Suisse
-2894;Johnson;Jennifer;Neurologue;Chavez, Randolph and Stevens;6095088110;Femme;Rue de l'HÙpital 9, 1530 Payerne, Vaud, Suisse
-2579;Koch;Jennifer;PÈdiatre;Pearson and Sons;829-131-6718x8958;Femme;Place de la Consultation 7, 1610 Oron-la-Ville, Vaud, Suisse
-2117;Ochoa;Kara;Dermatologue;Oliver, Hill and Huffman;135-000-5780;Femme;Route du Bien-Ítre 4, 1180 Rolle, Vaud, Suisse
+﻿ID Médecin;Nom;Prénom;Spécialité;Hôpital;Téléphone;Sexe;Adresse Hôpital
+2868;Roach;Jesse;Neurologue;Myers Inc;+1-890-985-8481x3632;Homme;Rue des Hôpitaux 10, 1007 Lausanne, Vaud, Suisse
+2044;Short;Oscar;Généraliste;Kline, Phelps and Kim;001-690-346-1383x079;Homme;Avenue des Médecins 5, 1260 Nyon, Vaud, Suisse
+2036;Woods;Teresa;Pédiatre;Thompson Group;001-480-772-6461;Femme;Place du Centre Médical 2, 1400 Yverdon-les-Bains, Vaud, Suisse
+2882;Davis;Ronnie;Pédiatre;Fowler, Willis and Green;(471)326-1543x72449;Homme;Boulevard des Cliniques 8, 1800 Vevey, Vaud, Suisse
+2439;Cordova;Sarah;Généraliste;Moore Ltd;631.241.7532x562;Femme;Route des Urgences 12, 1820 Montreux, Vaud, Suisse
+2424;Kennedy;Julie;Pédiatre;Watts, Franklin and Hunt;855-297-3683x31577;Femme;Chemin de la Santé 15, 1040 Echallens, Vaud, Suisse
+2894;Johnson;Jennifer;Neurologue;Chavez, Randolph and Stevens;6095088110;Femme;Rue de l'Hôpital 9, 1530 Payerne, Vaud, Suisse
+2579;Koch;Jennifer;Pédiatre;Pearson and Sons;829-131-6718x8958;Femme;Place de la Consultation 7, 1610 Oron-la-Ville, Vaud, Suisse
+2117;Ochoa;Kara;Dermatologue;Oliver, Hill and Huffman;135-000-5780;Femme;Route du Bien-être 4, 1180 Rolle, Vaud, Suisse
 2071;Schroeder;Eric;Neurologue;Johnson PLC;0040733458;Homme;Avenue de la Chirurgie 11, 1095 Lutry, Vaud, Suisse
 2925;Taylor;Daniel;Psychiatre;Dalton PLC;001-396-952-0497x25599;Homme;Rue du Diagnostic 6, 1110 Morges, Vaud, Suisse
 2144;Smith;Thomas;Dermatologue;Jimenez Ltd;5666721193;Homme;Boulevard des Soins 14, 1020 Renens, Vaud, Suisse
-2928;Harris;Kayla;Psychiatre;Owen Group;001-082-287-2552x2231;Femme;Route de la ThÈrapie 20, 1030 Bussigny, Vaud, Suisse
+2928;Harris;Kayla;Psychiatre;Owen Group;001-082-287-2552x2231;Femme;Route de la Thérapie 20, 1030 Bussigny, Vaud, Suisse
 2847;Baker;Kathy;Psychiatre;Wright-Black;590.988.1369x11699;Femme;Chemin des Docteurs 3, 1053 Cugy, Vaud, Suisse
-2316;Thomas;Michael;Psychiatre;Lester and Sons;281-158-8610;Homme;Place de la MÈdecine 5, 1070 Puidoux, Vaud, Suisse
+2316;Thomas;Michael;Psychiatre;Lester and Sons;281-158-8610;Homme;Place de la Médecine 5, 1070 Puidoux, Vaud, Suisse
