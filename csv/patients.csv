@@ -1,54 +1,54 @@
-﻿ID Patient;Nom;PrÈnom;Date de naissance;Adresse;TÈlÈphone;Assurance;Sexe
-1295;Adams;David;10.03.03;Rue du Simplon 5, 1006 Lausanne, Vaud, Suisse;411-863-1758x1858;Sanitas;Homme
-2700;Harris;Micheal;01.04.79;Avenue du ThÈ‚tre 7, 1005 Lausanne, Vaud, Suisse;9080341385;Sanitas + complÈmentaire;Homme
-7572;Luna;Maria;10.02.75;Rue Saint-Laurent 18, 1003 Lausanne, Vaud, Suisse;+1-429-994-9263x2221;Helsana + complÈmentaire;Femme
-9960;Dunn;Sandra;27.04.67;Place du MarchÈ 1, 1110 Morges, Vaud, Suisse;4073508598;Groupe Mutuel + complÈmentaire;Femme
-9626;Hill;Christopher;19.06.55;Boulevard de la Gare 10, 1260 Nyon, Vaud, Suisse;683-919-0722;CSS Assurance + complÈmentaire;Homme
-2634;Huffman;Joseph;11.02.78;Chemin de la Chapelle 3, 1400 Yverdon-les-Bains, Vaud, Suisse;324-929-0303;CSS Assurance + complÈmentaire;Homme
-1510;Hawkins;Michael;21.04.41;Rue du Mont-Blanc 4, 1800 Vevey, Vaud, Suisse;510-405-6025x8505;CSS Assurance;Homme
-8721;Graham;Sara;30.03.90;Avenue du Casino 20, 1820 Montreux, Vaud, Suisse;+1-620-237-7559x5603;CSS Assurance + complÈmentaire;Femme
-8215;Barnett;Brett;30.04.85;Place du Temple 5, 1162 St-Prex, Vaud, Suisse;001-746-295-1220x17512;CSS Assurance;Non-binaire
-6091;Harris;James;24.01.98;Grand-Rue 12, 1040 Echallens, Vaud, Suisse;001-688-904-6758;Groupe Mutuel;Homme
-1039;Luna;Mike;24.11.71;Chemin des …coles 8, 1134 Vufflens-le-Ch‚teau, Vaud, Suisse;001-085-627-2602;Groupe Mutuel + complÈmentaire;
-3274;Bryant;David;09.05.13;Rue Centrale 9, 1530 Payerne, Vaud, Suisse;4808988102;Swica + complÈmentaire;
-5661;Webster;Darrell;09.02.56;Route de Lausanne 22, 1618 Ch‚tel-St-Denis, Vaud, Suisse;097-672-1927x3387;Groupe Mutuel;Homme
-5061;Reyes;Ricky;28.03.60;Avenue de la Gare 30, 1020 Renens, Vaud, Suisse;095-789-7005x877;Assura + complÈmentaire;Homme
-2505;Pennington;Tara;03.06.36;Route des Avocates 15, 1470 Estavayer-le-Lac, Vaud, Suisse;001-012-025-8592;CSS Assurance;Femme
-4992;Bell;Hannah;08.03.03;Route de Crassier 22, 1262 Eysins, Vaud, Suisse;384.532.0982x820;Swica;Femme
-1027;Short;Brittany;02.07.92;Route de la Corniche 10, 1095 Lutry, Vaud, Suisse;338.552.8203x9934;CSS Assurance;Femme
-4020;Garcia;Jack;26.09.34;Rue du Lac 6, 1096 Cully, Vaud, Suisse;(145)664-9146x340;Assura;Homme
-2870;Lee;Anthony;17.06.79;Rue de la CÙte 17, 1170 Aubonne, Vaud, Suisse;6938444472;Groupe Mutuel;Homme
-7528;Dunn;Chad;07.05.94;Rue des Remparts 3, 1180 Rolle, Vaud, Suisse;8470050318;Groupe Mutuel;Homme
-9592;Davis;Janet;11.01.39;Place du Midi 10, 1302 Yverdon-les-Bains, Vaud, Suisse;147.945.9576;Concordia + complÈmentaire;Femme
-5808;Pham;Thomas;26.03.34;Route des Rives 8, 1025 St-Sulpice, Vaud, Suisse;640.684.3323x8072;Concordia + complÈmentaire;Homme
-9112;Park;Melanie;31.10.97;Avenue de Lavaux 14, 1090 La Croix, Vaud, Suisse;(737)088-3262x20249;CSS Assurance;Femme
-7363;James;Jesse;26.11.35;Rue de la Tour 7, 1273 Arzier-Le Muids, Vaud, Suisse;001-690-777-1846;Sanitas + complÈmentaire;Homme
-9663;Rodgers;Kristen;29.08.62;Grand-Rue 16, 1347 Le Sentier, Vaud, Suisse;347.326.9331;Sanitas;Femme
-4847;Vaughn;Jennifer;16.01.04;Chemin des Vignes 5, 1053 Cugy, Vaud, Suisse;(681)942-3286;Groupe Mutuel;
-1457;Hardy;Michelle;06.04.05;Place du 14-Juin 3, 1042 Assens, Vaud, Suisse;+1-794-963-8877x36484;CSS Assurance;Femme
-3949;Stephenson;Elizabeth;11.11.74;Chemin du Moulin 11, 1166 Perroy, Vaud, Suisse;104.265.1642x288;Sanitas + complÈmentaire;Femme
-8872;Davis;Melissa;27.11.65;Rue du CollËge 4, 1350 Orbe, Vaud, Suisse;399-941-9490x69751;Helsana + complÈmentaire;Femme
-1139;Schwartz;Adrian;23.03.77;Route du Village 9, 1163 Etoy, Vaud, Suisse;(751)435-6504x551;Concordia + complÈmentaire;Homme
-4802;Mckenzie;Heather;27.04.72;Rue du Soleil 12, 1510 Moudon, Vaud, Suisse;1465293604;CSS Assurance;Non-binaire
-9812;Vincent;Tamara;11.10.81;Route de Pomy 15, 1400 Yverdon-les-Bains, Vaud, Suisse;029-997-9727;Helsana + complÈmentaire;Femme
-2720;Mckinney;Vincent;04.05.10;Place du Ch‚teau 2, 1263 Crans-prËs-CÈligny, Vaud, Suisse;821.722.4092;Groupe Mutuel + complÈmentaire;Homme
-9288;Reed;Dillon;26.06.14;Avenue des Alpes 22, 1844 Villeneuve, Vaud, Suisse;+1-230-607-2839x28733;Assura;Homme
-9465;Wilson;Teresa;12.12.82;Route des Cerisiers 7, 1522 Lucens, Vaud, Suisse;7957429333;Helsana;Femme
-6732;Nelson;Lance;30.12.75;Rue de lí…glise 9, 1680 Romont, Vaud, Suisse;555-409-6781x80837;CSS Assurance + complÈmentaire;Homme
-3519;Cook;Paul;31.03.05;Rue des Fontaines 5, 1071 Chexbres, Vaud, Suisse;(266)111-6716x2248;Swica;Homme
-7615;Farrell;Juan;26.12.41;Place du Centre 8, 1052 Le Mont-sur-Lausanne, Vaud, Suisse;313-788-4190x7884;Groupe Mutuel + complÈmentaire;Homme
-8326;Goodwin;Rachel;09.11.83;Route de la MaladiËre 17, 1022 Chavannes-prËs-Renens, Vaud, Suisse;(093)531-4358;Helsana;Non-binaire
-4139;Bishop;Jessica;02.12.95;Rue du Stand 11, 1373 Chavornay, Vaud, Suisse;(938)009-0701x239;Assura;Femme
-7419;King;Jessica;10.02.07;Avenue de la Planta 18, 1580 Avenches, Vaud, Suisse;(517)740-8738x28441;Helsana;Femme
-6377;Collins;Ashley;21.08.42;Route des PrÈs 3, 1290 Versoix, Vaud, Suisse;+1-033-364-7070x39809;Swica;Femme
-5183;Hartman;Kristina;29.12.39;Boulevard de la Gare 6, 1040 Villars-le-Terroir, Vaud, Suisse;-9559;Sanitas + complÈmentaire;Femme
-7492;Paul;Alicia;22.07.63;Rue de la Poya 14, 1614 Granges (Veveyse), Vaud, Suisse;039-937-0274x521;Sanitas + complÈmentaire;Femme
-2049;Lane;Samantha;02.03.66;Rue du Cygne 2, 1422 Grandson, Vaud, Suisse;001-417-403-8801;Helsana + complÈmentaire;Femme
-9603;Hernandez;Marie;01.12.49;Route du LÈman 20, 1185 Mont-sur-Rolle, Vaud, Suisse;(453)362-3506x231;Sanitas + complÈmentaire;Femme
-6740;Matthews;Randall;03.11.80;Avenue de la Gare 5, 1800 Blonay, Vaud, Suisse;001-703-200-5873x0747;CSS Assurance;Homme
-5063;Thompson;Hannah;28.11.12;Route de St-Cergue 7, 1260 Nyon, Vaud, Suisse;001-159-160-5909x68781;Swica;
-9631;Joseph;Michael;07.11.49;Rue des Moulins 6, 1610 Oron-la-Ville, Vaud, Suisse;893-876-6866;Groupe Mutuel + complÈmentaire;Homme
-1442;Martin;Regina;05.07.63;Route de la Combaz 10, 1091 Grandvaux, Vaud, Suisse;(768)074-9698x3504;Concordia + complÈmentaire;Femme
-4992;Bell;Hannah;08.03.03;Route de Crassier 22, 1262 Eysins, Vaud, Suisse;384.532.0982x820;Swica;Femme
-3949;Stephenson;Elizabeth;11.11.74;Chemin du Moulin 11, 1166 Perroy, Vaud, Suisse;104.265.1642x288;Sanitas + complÈmentaire;Femme
-9812;Vincent;Tamara;11.10.81;Route de Pomy 15, 1400 Yverdon-les-Bains, Vaud, Suisse;029-997-9727;Helsana + complÈmentaire;Femme
+﻿ID Patient;Nom;Prénom;Date de naissance;Adresse;Téléphone;Assurance;Sexe
+1295;Adams;David;2003-03-10;Rue du Simplon 5, 1006 Lausanne, Vaud, Suisse;411-863-1758x1858;Sanitas;Homme
+2700;Harris;Micheal;1979-04-01;Avenue du Théâtre 7, 1005 Lausanne, Vaud, Suisse;9080341385;Sanitas + complémentaire;Homme
+7572;Luna;Maria;1975-02-10;Rue Saint-Laurent 18, 1003 Lausanne, Vaud, Suisse;+1-429-994-9263x2221;Helsana + complémentaire;Femme
+9960;Dunn;Sandra;1967-04-27;Place du Marché 1, 1110 Morges, Vaud, Suisse;4073508598;Groupe Mutuel + complémentaire;Femme
+9626;Hill;Christopher;1955-06-19;Boulevard de la Gare 10, 1260 Nyon, Vaud, Suisse;683-919-0722;CSS Assurance + complémentaire;Homme
+2634;Huffman;Joseph;1978-02-11;Chemin de la Chapelle 3, 1400 Yverdon-les-Bains, Vaud, Suisse;324-929-0303;CSS Assurance + complémentaire;Homme
+1510;Hawkins;Michael;1941-04-21;Rue du Mont-Blanc 4, 1800 Vevey, Vaud, Suisse;510-405-6025x8505;CSS Assurance;Homme
+8721;Graham;Sara;1990-03-30;Avenue du Casino 20, 1820 Montreux, Vaud, Suisse;+1-620-237-7559x5603;CSS Assurance + complémentaire;Femme
+8215;Barnett;Brett;1985-04-30;Place du Temple 5, 1162 St-Prex, Vaud, Suisse;001-746-295-1220x17512;CSS Assurance;Non-binaire
+6091;Harris;James;1998-01-24;Grand-Rue 12, 1040 Echallens, Vaud, Suisse;001-688-904-6758;Groupe Mutuel;Homme
+1039;Luna;Mike;1971-11-24;Chemin des Écoles 8, 1134 Vufflens-le-Château, Vaud, Suisse;001-085-627-2602;Groupe Mutuel + complémentaire;
+3274;Bryant;David;2013-05-09;Rue Centrale 9, 1530 Payerne, Vaud, Suisse;4808988102;Swica + complémentaire;
+5661;Webster;Darrell;1956-02-09;Route de Lausanne 22, 1618 Châtel-St-Denis, Vaud, Suisse;097-672-1927x3387;Groupe Mutuel;Homme
+5061;Reyes;Ricky;1960-03-28;Avenue de la Gare 30, 1020 Renens, Vaud, Suisse;095-789-7005x877;Assura + complémentaire;Homme
+2505;Pennington;Tara;1936-06-03;Route des Avocates 15, 1470 Estavayer-le-Lac, Vaud, Suisse;001-012-025-8592;CSS Assurance;Femme
+4992;Bell;Hannah;2003-03-08;Route de Crassier 22, 1262 Eysins, Vaud, Suisse;384.532.0982x820;Swica;Femme
+1027;Short;Brittany;1992-07-02;Route de la Corniche 10, 1095 Lutry, Vaud, Suisse;338.552.8203x9934;CSS Assurance;Femme
+4020;Garcia;Jack;1934-09-26;Rue du Lac 6, 1096 Cully, Vaud, Suisse;(145)664-9146x340;Assura;Homme
+2870;Lee;Anthony;1979-06-17;Rue de la Côte 17, 1170 Aubonne, Vaud, Suisse;6938444472;Groupe Mutuel;Homme
+7528;Dunn;Chad;1994-05-07;Rue des Remparts 3, 1180 Rolle, Vaud, Suisse;8470050318;Groupe Mutuel;Homme
+9592;Davis;Janet;1939-01-11;Place du Midi 10, 1302 Yverdon-les-Bains, Vaud, Suisse;147.945.9576;Concordia + complémentaire;Femme
+5808;Pham;Thomas;1934-03-26;Route des Rives 8, 1025 St-Sulpice, Vaud, Suisse;640.684.3323x8072;Concordia + complémentaire;Homme
+9112;Park;Melanie;1997-10-31;Avenue de Lavaux 14, 1090 La Croix, Vaud, Suisse;(737)088-3262x20249;CSS Assurance;Femme
+7363;James;Jesse;1935-11-26;Rue de la Tour 7, 1273 Arzier-Le Muids, Vaud, Suisse;001-690-777-1846;Sanitas + complémentaire;Homme
+9663;Rodgers;Kristen;1962-08-29;Grand-Rue 16, 1347 Le Sentier, Vaud, Suisse;347.326.9331;Sanitas;Femme
+4847;Vaughn;Jennifer;2004-01-16;Chemin des Vignes 5, 1053 Cugy, Vaud, Suisse;(681)942-3286;Groupe Mutuel;
+1457;Hardy;Michelle;2005-04-06;Place du 14-Juin 3, 1042 Assens, Vaud, Suisse;+1-794-963-8877x36484;CSS Assurance;Femme
+3949;Stephenson;Elizabeth;1974-11-11;Chemin du Moulin 11, 1166 Perroy, Vaud, Suisse;104.265.1642x288;Sanitas + complémentaire;Femme
+8872;Davis;Melissa;1965-11-27;Rue du Collège 4, 1350 Orbe, Vaud, Suisse;399-941-9490x69751;Helsana + complémentaire;Femme
+1139;Schwartz;Adrian;1977-03-23;Route du Village 9, 1163 Etoy, Vaud, Suisse;(751)435-6504x551;Concordia + complémentaire;Homme
+4802;Mckenzie;Heather;1972-04-27;Rue du Soleil 12, 1510 Moudon, Vaud, Suisse;1465293604;CSS Assurance;Non-binaire
+9812;Vincent;Tamara;1981-10-11;Route de Pomy 15, 1400 Yverdon-les-Bains, Vaud, Suisse;029-997-9727;Helsana + complémentaire;Femme
+2720;Mckinney;Vincent;2010-05-04;Place du Château 2, 1263 Crans-près-Céligny, Vaud, Suisse;821.722.4092;Groupe Mutuel + complémentaire;Homme
+9288;Reed;Dillon;2014-06-26;Avenue des Alpes 22, 1844 Villeneuve, Vaud, Suisse;+1-230-607-2839x28733;Assura;Homme
+9465;Wilson;Teresa;1982-12-12;Route des Cerisiers 7, 1522 Lucens, Vaud, Suisse;7957429333;Helsana;Femme
+6732;Nelson;Lance;1975-12-30;Rue de l’Église 9, 1680 Romont, Vaud, Suisse;555-409-6781x80837;CSS Assurance + complémentaire;Homme
+3519;Cook;Paul;2005-03-31;Rue des Fontaines 5, 1071 Chexbres, Vaud, Suisse;(266)111-6716x2248;Swica;Homme
+7615;Farrell;Juan;1941-12-26;Place du Centre 8, 1052 Le Mont-sur-Lausanne, Vaud, Suisse;313-788-4190x7884;Groupe Mutuel + complémentaire;Homme
+8326;Goodwin;Rachel;1983-11-09;Route de la Maladière 17, 1022 Chavannes-près-Renens, Vaud, Suisse;(093)531-4358;Helsana;Non-binaire
+4139;Bishop;Jessica;1995-12-02;Rue du Stand 11, 1373 Chavornay, Vaud, Suisse;(938)009-0701x239;Assura;Femme
+7419;King;Jessica;2007-02-10;Avenue de la Planta 18, 1580 Avenches, Vaud, Suisse;(517)740-8738x28441;Helsana;Femme
+6377;Collins;Ashley;1942-08-21;Route des Prés 3, 1290 Versoix, Vaud, Suisse;+1-033-364-7070x39809;Swica;Femme
+5183;Hartman;Kristina;1939-12-29;Boulevard de la Gare 6, 1040 Villars-le-Terroir, Vaud, Suisse;+1-629-601-8330;Sanitas + complémentaire;Femme
+7492;Paul;Alicia;1963-07-22;Rue de la Poya 14, 1614 Granges (Veveyse), Vaud, Suisse;039-937-0274x521;Sanitas + complémentaire;Femme
+2049;Lane;Samantha;1966-03-02;Rue du Cygne 2, 1422 Grandson, Vaud, Suisse;001-417-403-8801;Helsana + complémentaire;Femme
+9603;Hernandez;Marie;1949-12-01;Route du Léman 20, 1185 Mont-sur-Rolle, Vaud, Suisse;(453)362-3506x231;Sanitas + complémentaire;Femme
+6740;Matthews;Randall;1980-11-03;Avenue de la Gare 5, 1800 Blonay, Vaud, Suisse;001-703-200-5873x0747;CSS Assurance;Homme
+5063;Thompson;Hannah;2012-11-28;Route de St-Cergue 7, 1260 Nyon, Vaud, Suisse;001-159-160-5909x68781;Swica;
+9631;Joseph;Michael;1949-11-07;Rue des Moulins 6, 1610 Oron-la-Ville, Vaud, Suisse;893-876-6866;Groupe Mutuel + complémentaire;Homme
+1442;Martin;Regina;1963-07-05;Route de la Combaz 10, 1091 Grandvaux, Vaud, Suisse;(768)074-9698x3504;Concordia + complémentaire;Femme
+4992;Bell;Hannah;2003-03-08;Route de Crassier 22, 1262 Eysins, Vaud, Suisse;384.532.0982x820;Swica;Femme
+3949;Stephenson;Elizabeth;1974-11-11;Chemin du Moulin 11, 1166 Perroy, Vaud, Suisse;104.265.1642x288;Sanitas + complémentaire;Femme
+9812;Vincent;Tamara;1981-10-11;Route de Pomy 15, 1400 Yverdon-les-Bains, Vaud, Suisse;029-997-9727;Helsana + complémentaire;Femme

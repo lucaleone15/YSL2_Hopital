@@ -1,4 +1,38 @@
--- Active: 1743084403060@@127.0.0.1@5432@hopital
+--créer table temp patient
+create temp table temp_patient(
+id integer,
+nom varchar,
+prenom varchar,
+date_naiss date,
+adresse varchar,
+telephone varchar,
+assurance varchar,
+sexe varchar
+);
+--importer csv de patient
+copy temp_patient(id, nom, prenom, date_naiss, adresse, telephone, assurance, sexe)
+from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\patients.csv'
+WITH CSV HEADER
+DELIMITER ';';
+
+--créer temp Médecin 
+create temp table temp_medecin(
+id integer,
+nom varchar,
+prenom varchar,
+specialite varchar,
+hopital varchar,
+telephone varchar,
+sexe varchar,
+adresse_hopital varchar
+);
+--importer csv médecin
+copy temp_medecin(id, nom, prenom, specialite, hopital, telephone, sexe, adresse_hopital)
+from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\medecins.csv'
+WITH CSV HEADER
+DELIMITER ';';
+
+
 --Création de la tablwe temp adresse
 create temp table temp_adresse (
     id serial primary key,
