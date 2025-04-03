@@ -6,19 +6,13 @@ WHERE specialite LIKE '%È%';
 */
 SELECT DISTINCT specialite FROM temp_medecin
 
--- drop table temp_specialisation;
-
-create temp table specialisation (
-    medecin_id INTEGER,
-    specialisation_nom VARCHAR(30) NOT NULL
-);
-
+-- Création table spécialisation
 create table specialisation (
     id SERIAL PRIMARY KEY,
     specialisation_nom VARCHAR(30) NOT NULL
 );
- drop table specialisation;
- 
+
+-- Insertion donnée dans table spécialité
 INSERT INTO
     specialisation (specialisation_nom)
 select DISTINCT
@@ -27,8 +21,23 @@ from temp_medecin
 where
     temp_medecin.specialite IS NOT NULL;
 
+-- Ajout de la colonne specialisation_id dans temp_medecin
+ALTER TABLE temp_medecin
+ADD COLUMN specialisation_id INTEGER;
+
+-- Ajoute les id des spécialisation dans temp_medecin
+UPDATE temp_medecin tm
+SET
+    specialisation_id = s.id
+FROM specialisation s
+WHERE
+    tm.specialite = s.specialisation_nom;
+
+-- Supprime la colonne specialite dans medecin
 ALTER TABLE temp_medecin
 DROP COLUMN specialite;
 
 SELECT * FROM specialisation;
-SELECT * FROM temp_medecin;
+SELECT *
+FROM temp_medecin tm;
+-- JOIN specialisation s ON s.id = tm.specialisation_id;
