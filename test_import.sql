@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 --créer table temp patient
 create temp table temp_patient (
     id integer,
@@ -24,7 +25,6 @@ from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\patients.csv'
 WITH
     CSV HEADER DELIMITER ';';
 
-
 --créer temp Médecin
 create temp table temp_medecin (
     id integer,
@@ -50,7 +50,6 @@ copy temp_medecin (
 from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\medecins.csv'
 WITH
     CSV HEADER DELIMITER ';';
-
 
 --Création de la tablwe temp adresse
 create temp table temp_adresse (
@@ -91,7 +90,7 @@ create table hopital (
     nom varchar(50) not null
 );
 
---Insértion dans la table finale
+--Insértion dans la table finale hopital
 insert into
     hopital (id, adresse_id, nom)
 select DISTINCT
@@ -120,7 +119,6 @@ CREATE table adresse ( id serial primary key, nom VARCHAR(200) );
 --Ajouter les adresses de la table temporaire à la table final en faisant attention à ne pas avoir de duplicats
 INSERT into adresse (nom) select DISTINCT nom from temp_adresse;
 
-
 --Création du type enum pour les sexes des personnes
 create type type_sexe as enum ('Homme',
 'Femme',
@@ -138,7 +136,6 @@ create temp table temp_personne (
 drop table temp_personne;
 --Supprimer type enum des sexes EN CAS D'ERREUR UNIQUEMENT
 drop type type_sexe;
-
 
 --insérer les données des médecins dans les personnes (temp)
 insert into
@@ -286,3 +283,72 @@ alter TABLE temp_patient alter COLUMN assurance_id SET NOT NULL;
 
 --Ajoute une contrainte NOT NULL au fait d'avoir une complémentaire
 alter TABLE temp_patient alter COLUMN complementaire SET NOT NULL;
+
+
+
+
+
+
+/*//////////////////////////////////////////
+CODE PAS ENCORE TESTÉ A PARTIR D'ICI !!!!!
+///////////////////////////////////////////*/
+
+--Créer une colone pour les id des adresse des patients temp
+alter TABLE temp_patient add adresse_id int;
+
+--Lier les adresses aux patients temp
+UPDATE temp_patient tp
+SET
+    adresse_id = ad.id
+FROM adresse ad
+WHERE
+    tp.adresse = ad.nom;
+
+--Ajouter une colone pour les id des personnes aux patients temp
+ALTER TABLE temp_patient ADD personne_id int;
+
+-- lier les patients temp aux personnes
+UPDATE temp_patient tp
+SET
+    personne_id = per.id
+FROM personne per
+WHERE
+    per.nom = tp.nom && per.prenom = tp.prenom;
+
+--creation table final des patients
+create table patient (
+    id serial primary key,
+    personne_id integer references personne (id) not null,
+    assurance_id integer references assurance (id) not null,
+    adresse_id integer references adresse (id) not null,
+    date_naiss date not null,
+    complementaire boolean not null
+);
+
+--insérer les données patient temp à patient
+INSERT INTO
+    patient (
+        personne_id,
+        assurance_id,
+        adresse_id,
+        date_naiss,
+        complementaire
+    )
+SELECT
+    personne_id,
+    assurance_id,
+    adresse_id,
+    date_naiss,
+    complementaire
+FROM temp_patient;
+
+--ajouter une ligne pour les id de l'hopital à médecins temp
+alter table temp_medecin add hopital_id int;
+
+--Relier médecin temp à hopital
+UPDATE temp_medecin mp
+SET
+    hopital_id = hp.id
+FROM hopital hp
+WHERE
+    hp.nom = mp.hopital;
