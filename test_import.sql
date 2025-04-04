@@ -290,8 +290,10 @@ alter TABLE temp_patient alter COLUMN complementaire SET NOT NULL;
 
 
 /*//////////////////////////////////////////
+********************************************
 CODE PAS ENCORE TESTÉ A PARTIR D'ICI !!!!!
-///////////////////////////////////////////*/
+********************************************
+//////////////////////////////////////////*/
 
 --Créer une colone pour les id des adresse des patients temp
 alter TABLE temp_patient add adresse_id int;
