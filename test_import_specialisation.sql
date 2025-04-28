@@ -36,7 +36,7 @@ WHERE
 ALTER TABLE temp_medecin
 DROP COLUMN specialite;
 
-SELECT * FROM specialisation;
-SELECT *
-FROM temp_medecin tm;
+-- SELECT * FROM specialisation;
+-- SELECT *
+-- FROM temp_medecin tm;
 -- JOIN specialisation s ON s.id = tm.specialisation_id;
