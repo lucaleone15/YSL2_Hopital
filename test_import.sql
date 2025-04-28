@@ -372,3 +372,6 @@ select
 from temp_medecin;
 
 select * from medecin;
+
+
+-- IL MANQUE QUASIMENT TOUTES LES CONTRAINTES DE TABLES (NOT NULL, UNIQUE,...)
