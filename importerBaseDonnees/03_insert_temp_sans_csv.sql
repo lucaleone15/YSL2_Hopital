@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 --Ajouter les adresses des patients à la table temp adresse
 INSERT into
     temp_adresse (nom)
@@ -59,3 +60,12 @@ select DISTINCT
         ) [1]
     ) as assurance
 from temp_patient;
+
+--Ajout dans specialisation
+INSERT INTO
+    temp_specialisation (specialisation_nom)
+select DISTINCT
+    specialite
+from temp_medecin
+where
+    temp_medecin.specialite IS NOT NULL;

@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 /*//////////////////////////////////////////
 ********************************************
 ADRESSE
@@ -81,12 +82,9 @@ SPÉCIALISATION
 ********************************************
 //////////////////////////////////////////*/
 INSERT INTO
-    specialisation (specialisation_nom)
-select DISTINCT
-    specialite
-from temp_medecin
-where
-    temp_medecin.specialite IS NOT NULL;
+    specialisation (id, specialisation_nom)
+SELECT id, specialisation_nom
+from temp_specialisation;
 
 /*//////////////////////////////////////////
 ********************************************
@@ -129,6 +127,7 @@ PATIENT
 --insérer les données patient temp à patient
 INSERT INTO
     patient (
+        id,
         personne_id,
         assurance_id,
         adresse_id,
@@ -136,6 +135,7 @@ INSERT INTO
         complementaire
     )
 SELECT
+    id,
     personne_id,
     assurance_id,
     adresse_id,
@@ -156,11 +156,12 @@ INSERT INTO
         motif
     )
 SELECT
-    id,
+    temp_rdv.id,
     medecin_id,
     rdv_date,
     motif::type_rdv
-FROM temp_rdv;
+FROM temp_rdv
+    inner join medecin on medecin.id = medecin_id;
 
 /*//////////////////////////////////////////
 ********************************************
@@ -170,7 +171,9 @@ HISTORIQUE RENDEZ-VOUS
 INSERT INTO
     patient_rdv_historique (rdv_id, patient_id)
 SELECT id, patient_id
-FROM temp_rdv;
+FROM temp_rdv
+where
+    patient_id is not null;
 
 /*//////////////////////////////////////////
 ********************************************

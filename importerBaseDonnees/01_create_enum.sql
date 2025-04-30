@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 --Création du type enum pour les sexes des personnes
 create type type_sexe as enum ('Homme',
 'Femme',

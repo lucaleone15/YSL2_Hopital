@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 --ajouter une ligne pour les id de l'hopital à médecins temp
 alter table temp_medecin add hopital_id int;
 

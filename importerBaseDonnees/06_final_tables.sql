@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 /*creation adresse*/
 create table adresse (
     id serial primary key,
@@ -74,8 +75,7 @@ create table rendez_vous (
 create table patient_rdv_historique (
     id serial primary key,
     patient_id integer references patient (id) not null,
-    rdv_id integer references rendez_vous (id) not null,
-    date_rdv date not null
+    rdv_id integer references rendez_vous (id) not null
 );
 
 /*creation prescription*/

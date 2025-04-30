@@ -1,3 +1,4 @@
+-- Active: 1743084403060@@127.0.0.1@5432@hopital
 --Ajout au patient temporaire l'id de l'assurance
 alter table temp_patient add assurance_id int;
 
