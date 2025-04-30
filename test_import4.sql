@@ -23,7 +23,7 @@ DELIMITER ';';
 
 CREATE TABLE prescription (
     id SERIAL PRIMARY KEY,
-    rendezvous_id INTEGER REFERENCES rendezvous(id) NOT NULL,
+    rendezvous_id INTEGER REFERENCES rendez_vous(id) NOT NULL,
     medicament_id INTEGER REFERENCES medicament(id) NOT NULL,
     debut_traitement DATE NOT NULL,
     fin_traitement DATE NOT NULL
