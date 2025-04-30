@@ -56,7 +56,7 @@ INSERT INTO rendez_vous (id, patient_id, medecin_id, date_rdv, motif)
 SELECT id, patient_id, medecin_id, motif::rdv_type FROM temp_rdv;
 
 -- CREATION DE LA TABLE RDV_HISTORIQUE
-
+-- Changer NOT NULL et UPDATE après transfert -- A FAIRE
 create table patient_rdv_historique(id serial primary key,
 patient_id integer references patient(id) not null,
 rdv_id integer references rendez_vous(id) not null,
