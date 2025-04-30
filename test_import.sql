@@ -161,7 +161,7 @@ from temp_patient;
 update temp_personne set sexe = 'Non-spécifié' where sexe is NULL;
 
 --Ajoute la contrainte NUT NULL pour les sexes
-alter table temp_personne alter column sexe set not null;
+--alter table temp_personne alter column sexe set not null;
 
 --Creation de la table finale de personne
 CREATE table personne (
@@ -225,8 +225,9 @@ create table assurance (
 
 --Ajoute les assurances à la table finale et évite les duplicats de la meme assurance.
 INSERT INTO
-    assurance (assurance_nom)
+    assurance (id, assurance_nom)
 SELECT DISTINCT
+    id,
     assurance_nom
 from temp_assurance;
 

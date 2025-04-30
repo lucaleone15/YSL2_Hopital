@@ -33,15 +33,6 @@ table temp_rdv (
     motif varchar
 );
 
--- Médicament
-create temp
-table temp_medicament (
-    id integer,
-    nom varchar,
-    dosage varchar,
-    med_type varchar
-);
-
 -- Prescription
 create temp
 table temp_prescription (
@@ -90,4 +81,13 @@ table temp_medicament (
     nom varchar,
     dosage varchar,
     med_type varchar
+);
+
+-- CREATION TABLE TEMPORAIRE RDV_HISTORIQUE
+
+create temp
+table temp_rdv_historique (
+    id serial primary key,
+    patient_id integer,
+    rdv_id integer
 );

@@ -27,7 +27,7 @@ on
 	conflict (rue_et_num,
 	code_postal) do nothing;
 
---Ajouter les adresses des patient
+--Ajouter les adresses
 insert
 	into
 	adresse (rue_et_num,
@@ -44,13 +44,13 @@ select
 from
 	(
 	select
-		string_to_array(adresse,
+		string_to_array(nom,
 		', ') as parties,
-		string_to_array((string_to_array(adresse,
+		string_to_array((string_to_array(nom,
 		', '))[2],
 		' ') as subparties
 	from
-		patient_temp
+		temp_adresse
 ) as temp
 on
 	conflict (rue_et_num,
