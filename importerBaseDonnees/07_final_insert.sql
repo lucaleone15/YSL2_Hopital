@@ -80,7 +80,13 @@ FROM temp_medicament;
 SPÉCIALISATION
 ********************************************
 //////////////////////////////////////////*/
---DEJA CREE PRECEDEMENT !!!!!!!!!!!!!!!!
+INSERT INTO
+    specialisation (specialisation_nom)
+select DISTINCT
+    specialite
+from temp_medecin
+where
+    temp_medecin.specialite IS NOT NULL;
 
 /*//////////////////////////////////////////
 ********************************************

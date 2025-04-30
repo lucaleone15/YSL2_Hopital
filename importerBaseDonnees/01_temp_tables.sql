@@ -91,3 +91,10 @@ table temp_rdv_historique (
     patient_id integer,
     rdv_id integer
 );
+
+--Spécialisation
+create temp
+table temp_specialisation (
+    id SERIAL PRIMARY KEY,
+    specialisation_nom VARCHAR(30) NOT NULL
+);

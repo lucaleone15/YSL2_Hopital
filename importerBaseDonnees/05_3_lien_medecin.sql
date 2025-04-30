@@ -20,3 +20,14 @@ FROM temp_personne pers
 WHERE
     pers.nom = tm.nom
     AND pers.prenom = tm.prenom;
+
+-- Ajout de la colonne specialisation_id dans temp_medecin
+ALTER TABLE temp_medecin ADD COLUMN specialisation_id INTEGER;
+
+-- Ajoute les id des spécialisation dans temp_medecin
+UPDATE temp_medecin tm
+SET
+    specialisation_id = s.id
+FROM temp_specialisation s
+WHERE
+    tm.specialite = s.specialisation_nom;

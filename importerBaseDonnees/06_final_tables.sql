@@ -32,7 +32,10 @@ create table medicament (
 );
 
 /*creation specialisation medecin*/
---DEJA CREE PRECEDEMENT !!!!!!!!!!!!!!!!
+create table specialisation (
+    id SERIAL PRIMARY KEY,
+    specialisation_nom VARCHAR(30) NOT NULL
+);
 
 /*creation hopital*/
 create table hopital (
