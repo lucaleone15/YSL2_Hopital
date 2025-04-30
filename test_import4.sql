@@ -1,3 +1,4 @@
+-- Active: 1743080852662@@127.0.0.1@5432@hopital
 
 
 -- Enlever les anciennes tables --
@@ -15,7 +16,7 @@ duree integer
 );
 
 copy temp_prescription(id, rdv_id, medicament_id, duree)
-from 'csv\prescriptions.csv'
+from 'C:\Users\loann\Documents\GitHub\YSL2_Hopital\csv\prescriptions.csv'
 WITH CSV HEADER
 DELIMITER ';';
 

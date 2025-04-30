@@ -25,7 +25,7 @@ motif varchar
 
 
 copy temp_rdv(id, patient_id, medecin_id, rdv_date, motif)
-from 'csv\rdv.csv'
+from 'C:\Users\loann\Documents\GitHub\YSL2_Hopital\csv\rdv.csv'
 WITH CSV HEADER
 DELIMITER ';';
 
@@ -49,13 +49,13 @@ create type type_rdv as enum ('Consultation',
 
 create table rendez_vous(id serial primary key,
 medecin_id integer references medecin(id) not null,
-date_rdv date not null,
-type_rdv not null);
+rdv_date date not null,
+motif type_rdv not null);
 
 -- IMPORT DE RDV DANS LA TABLE FINALE --
 
-INSERT INTO rendez_vous (id, patient_id, medecin_id, date_rdv, motif)
-SELECT id, patient_id, medecin_id, motif::rdv_type FROM temp_rdv;
+INSERT INTO rendez_vous (id, medecin_id, rdv_date, motif)
+SELECT id, medecin_id, rdv_date, motif::type_rdv FROM temp_rdv;
 
 -- CREATION DE LA TABLE RDV_HISTORIQUE
 create table patient_rdv_historique(id serial primary key,
