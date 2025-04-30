@@ -36,8 +36,10 @@ INSERT INTO prescription (rendezvous_id, medicament_id, debut_traitement, fin_tr
 SELECT 
     t.rdv_id,
     t.medicament_id,
-    rv.date AS debut_traitement,
-    rv.date + t.duree * INTERVAL '1 day' AS fin_traitement
+    rv.rdv_date,
+    rv.rdv_date + t.duree * INTERVAL '1 day' AS fin_traitement
 FROM temp_prescription t
 JOIN rendez_vous rv ON rv.id = t.rdv_id;
 
+SELECT *
+FROM prescription
