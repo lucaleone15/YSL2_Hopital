@@ -10,6 +10,8 @@ DROP TYPE type_rdv;
 
 DROP TABLE temp_rdv;
 
+DROP TABLE 
+
 --POUR LES RDV--
 -- CRÉATION DE LA TABLE TEMPORAIRE --
 
@@ -71,7 +73,14 @@ SELECT id, patient_id FROM temp_rdv;
 -- TEST --
 
 SELECT *
-FROM rendez_vous
+FROM rendez_vous;
+
+SELECT *
+FROM prescription;
+
+SELECT *
+FROM patient_rdv_historique
+INNER JOIN patient p ON p.id = patient_rdv_historique.patient_id;
 
 
 
