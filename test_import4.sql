@@ -39,7 +39,8 @@ SELECT
     rv.rdv_date,
     rv.rdv_date + t.duree * INTERVAL '1 day' AS fin_traitement
 FROM temp_prescription t
-JOIN rendez_vous rv ON rv.id = t.rdv_id;
+JOIN rendez_vous rv ON rv.id = t.rdv_id
+WHERE t.duree <= 365;
 
 SELECT *
 FROM prescription
