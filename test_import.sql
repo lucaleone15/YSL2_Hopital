@@ -161,7 +161,7 @@ from temp_patient;
 update temp_personne set sexe = 'Non-spécifié' where sexe is NULL;
 
 --Ajoute la contrainte NUT NULL pour les sexes
-alter table temp_personne alter column sexe set not null;
+--alter table temp_personne alter column sexe set not null;
 
 --Creation de la table finale de personne
 CREATE table personne (
