@@ -14,7 +14,7 @@ create table personne (
     nom varchar(50) not null,
     prenom varchar(50) not null,
     telephone varchar(50),
-    sexe type_sexe not null default 'non-spécifié'
+    sexe type_sexe default 'Non-spécifié'
 );
 
 /*creation assurance*/
@@ -32,10 +32,7 @@ create table medicament (
 );
 
 /*creation specialisation medecin*/
-create table specialisation (
-    id SERIAL PRIMARY KEY,
-    specialisation_nom VARCHAR(30) NOT NULL
-);
+--DEJA CREE PRECEDEMENT !!!!!!!!!!!!!!!!
 
 /*creation hopital*/
 create table hopital (
@@ -65,8 +62,8 @@ create table patient (
 create table rendez_vous (
     id serial primary key,
     medecin_id integer references medecin (id) not null,
-    date_rdv date not null,
-    type_rdv not null
+    rdv_date date not null,
+    motif type_rdv not null
 );
 
 /*creation historique patient*/
@@ -74,14 +71,13 @@ create table patient_rdv_historique (
     id serial primary key,
     patient_id integer references patient (id) not null,
     rdv_id integer references rendez_vous (id) not null,
-    date_rdv date not null,
-    type_rdv not null
+    date_rdv date not null
 );
 
 /*creation prescription*/
 CREATE TABLE prescription (
     id SERIAL PRIMARY KEY,
-    rendezvous_id INTEGER REFERENCES rendezvous (id) NOT NULL,
+    rendezvous_id INTEGER REFERENCES rendez_vous (id) NOT NULL,
     medicament_id INTEGER REFERENCES medicament (id) NOT NULL,
     debut_traitement DATE NOT NULL,
     fin_traitement DATE NOT NULL

@@ -225,8 +225,9 @@ create table assurance (
 
 --Ajoute les assurances à la table finale et évite les duplicats de la meme assurance.
 INSERT INTO
-    assurance (assurance_nom)
+    assurance (id, assurance_nom)
 SELECT DISTINCT
+    id,
     assurance_nom
 from temp_assurance;
 
