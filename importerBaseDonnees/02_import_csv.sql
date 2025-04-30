@@ -46,6 +46,7 @@ from 'csv\medoc.csv'
 WITH
     CSV HEADER DELIMITER ';';
 
+--Ajouter dans temp_prescription
 copy temp_prescription (
     id,
     rdv_id,
