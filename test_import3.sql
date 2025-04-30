@@ -1,5 +1,7 @@
 -- Active: 1743080852662@@127.0.0.1@5432@hopital
 
+-- PAS OUBLIER DE UPDATE LES FOREIGN KEY
+
 -- Enlever les anciennes tables --
 
 DROP TABLE rendez_vous;
@@ -56,17 +58,15 @@ INSERT INTO rendez_vous (id, patient_id, medecin_id, date_rdv, motif)
 SELECT id, patient_id, medecin_id, motif::rdv_type FROM temp_rdv;
 
 -- CREATION DE LA TABLE RDV_HISTORIQUE
--- Changer NOT NULL et UPDATE après transfert -- A FAIRE
 create table patient_rdv_historique(id serial primary key,
 patient_id integer references patient(id) not null,
 rdv_id integer references rendez_vous(id) not null,
-date_rdv date not null,
-type_rdv not null);
+date_rdv date not null);
 
 -- IMPORT patient_rdv_historique DANS LA TABLE FINALE --
 
-INSERT INTO patient_rdv_historique (id, patient_id, rdv_id)
-SELECT id, medecin_id, medecin_id, motif::rdv_type FROM temp_rdv;
+INSERT INTO patient_rdv_historique (rdv_id, patient_id)
+SELECT id, patient_id FROM temp_rdv;
 
 -- TEST --
 

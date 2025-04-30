@@ -1,3 +1,5 @@
+
+
 -- Enlever les anciennes tables --
 
 DROP TABLE prescription;
@@ -36,5 +38,5 @@ SELECT
     rv.date AS debut_traitement,
     rv.date + t.duree * INTERVAL '1 day' AS fin_traitement
 FROM temp_prescription t
-JOIN rendezvous rv ON rv.id = t.rdv_id;
+JOIN rendez_vous rv ON rv.id = t.rdv_id;
 
