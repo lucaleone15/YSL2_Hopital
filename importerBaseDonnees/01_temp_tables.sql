@@ -1,9 +1,5 @@
---Création du type enum pour les sexes des personnes
-create type type_sexe as enum ('Homme',
-'Femme',
-'Non-spécifié', 'Non-binaire');
-
-create temp table temp_patient (
+create temp
+table temp_patient (
     id integer,
     nom varchar,
     prenom varchar,
@@ -15,7 +11,8 @@ create temp table temp_patient (
 );
 
 --Médecin
-create temp table temp_medecin (
+create temp
+table temp_medecin (
     id integer,
     nom varchar,
     prenom varchar,
@@ -27,7 +24,8 @@ create temp table temp_medecin (
 );
 
 -- Rendez-vous
-create temp table temp_rdv (
+create temp
+table temp_rdv (
     id integer primary key,
     patient_id integer,
     medecin_id integer,
@@ -36,7 +34,8 @@ create temp table temp_rdv (
 );
 
 -- Médicament
-create temp table temp_medicament (
+create temp
+table temp_medicament (
     id integer,
     nom varchar,
     dosage varchar,
@@ -44,7 +43,8 @@ create temp table temp_medicament (
 );
 
 -- Prescription
-create temp table temp_prescription (
+create temp
+table temp_prescription (
     id integer,
     rdv_id integer,
     medicament_id integer,
@@ -52,20 +52,23 @@ create temp table temp_prescription (
 );
 
 --Adresse
-create temp table temp_adresse (
+create temp
+table temp_adresse (
     id serial primary key,
     nom VARCHAR(200)
 );
 
 --Hôpital
-create temp table temp_hopital (
+create temp
+table temp_hopital (
     id serial PRIMARY key,
     adresse varchar,
     nom varchar
 );
 
 --Personne
-create temp table temp_personne (
+create temp
+table temp_personne (
     id serial,
     nom varchar(50) not null,
     prenom varchar(50) not null,
@@ -74,7 +77,17 @@ create temp table temp_personne (
 );
 
 --Assurance
-create temp table temp_assurance (
+create temp
+table temp_assurance (
     id serial primary key,
     assurance_nom varchar(60) not null
+);
+
+--Medicament
+create temp
+table temp_medicament (
+    id integer,
+    nom varchar,
+    dosage varchar,
+    med_type varchar
 );
