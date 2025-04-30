@@ -2,7 +2,7 @@
 create table adresse (
     id serial primary key,
     rue_et_num varchar(100) not null,
-    code_postale varchar(10) not null,
+    code_postal varchar(10) not null,
     ville varchar(50) not null,
     etat varchar(50),
     pays varchar(50) not null
@@ -37,7 +37,8 @@ create table medicament (
 /*creation hopital*/
 create table hopital (
     id serial primary key,
-    adresse_id integer references adresse (id) not null
+    adresse_id integer references adresse (id) not null,
+    nom varchar(50) not null
 );
 
 /*creation medecin*/

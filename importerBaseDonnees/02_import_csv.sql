@@ -36,13 +36,13 @@ copy temp_rdv (
     rdv_date,
     motif
 )
-from 'csv\rdv.csv'
+from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\rdv.csv'
 WITH
     CSV HEADER DELIMITER ';';
 
 --Ajouter dans temp_medicament
 copy temp_medicament (id, nom, dosage, med_type)
-from 'csv\medoc.csv'
+from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\medoc.csv'
 WITH
     CSV HEADER DELIMITER ';';
 
@@ -53,6 +53,6 @@ copy temp_prescription (
     medicament_id,
     duree
 )
-from 'csv\prescriptions.csv'
+from 'C:\Users\yanni\OneDrive\HEIG\Cours\24-25 2S\InfraDon1\Projet\prescriptions.csv'
 WITH
     CSV HEADER DELIMITER ';';

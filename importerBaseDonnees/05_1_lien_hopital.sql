@@ -6,6 +6,6 @@ alter table temp_hopital add adresse_id int;
 UPDATE temp_hopital th
 SET
     adresse_id = ad.id
-FROM adresse ad
+FROM temp_adresse ad
 WHERE
     th.adresse = ad.nom;

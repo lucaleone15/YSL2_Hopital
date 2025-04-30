@@ -24,7 +24,6 @@ from (
             ) as subparties
         from temp_adresse
     ) as temp
-on conflict (rue_et_num, code_postal) do nothing;
 
 /*//////////////////////////////////////////
 ********************************************
