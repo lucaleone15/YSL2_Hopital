@@ -34,7 +34,7 @@ DELIMITER ';';
 -- CREATION TABLE TEMPORAIRE RDV_HISTORIQUE
 
 create temp table temp_rdv_historique(
-id integer primary key,
+id serial primary key,
 patient_id integer,
 rdv_id integer
 );

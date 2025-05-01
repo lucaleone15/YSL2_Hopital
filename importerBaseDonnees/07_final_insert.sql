@@ -7,6 +7,7 @@ ADRESSE
 --Ajouter les adresses
 insert into
     adresse (
+        id
         rue_et_num,
         code_postal,
         ville,
@@ -14,6 +15,7 @@ insert into
         pays
     )
 select
+    id
     TRIM(parties[1]) as rue_et_num,
     TRIM(subparties[1]) as code_postal,
     TRIM(subparties[2]) as ville,
@@ -134,7 +136,7 @@ INSERT INTO
         date_naiss,
         complementaire
     )
-SELECT
+SELECT DISTINCT
     id,
     personne_id,
     assurance_id,
@@ -170,8 +172,9 @@ HISTORIQUE RENDEZ-VOUS
 //////////////////////////////////////////*/
 INSERT INTO
     patient_rdv_historique (rdv_id, patient_id)
-SELECT id, patient_id
+SELECT distinct temp_rdv.id, patient_id
 FROM temp_rdv
+Inner join rendez_vous on temp_rdv.id = rendez_vous.id
 where
     patient_id is not null;
 
