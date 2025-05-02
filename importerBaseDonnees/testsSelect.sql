@@ -66,4 +66,76 @@ FROM (
         FROM temp_patient
     ) AS temp;
 
-    select * from test_adresse;
+select * from personne;
+
+CREATE OR REPLACE FUNCTION format_num(num TEXT)
+RETURNS TEXT AS $$
+DECLARE
+    res TEXT := '';
+    i INT := 1;
+BEGIN
+    WHILE i <= LENGTH(num) LOOP
+        res := res || SUBSTRING(num, i, 2);
+        IF i + 2 <= LENGTH(num) THEN
+            res := res || ' ';
+        END IF;
+        i := i + 2;
+    END LOOP;
+    RETURN res;
+END;
+$$ LANGUAGE plpgsql IMMUTABLE;
+
+-- 1. Nettoyage + découpage extension AVANT transformation
+SELECT
+    telephone AS original,
+    '+' || indicatif || ' ' || format_num (rest) AS telephone_formate,
+    extension
+FROM (
+        SELECT
+            telephone,
+            -- Extraire extension (sans 'x') si présente
+            CASE
+                WHEN telephone ~ 'x[0-9]+$' THEN SUBSTRING(
+                    telephone
+                    FROM 'x([0-9]+)$'
+                )
+                ELSE NULL
+            END AS extension,
+            -- Numéro sans caractères spéciaux ET sans extension
+            REGEXP_REPLACE(
+                REGEXP_REPLACE(
+                    telephone, 'x[0-9]+$', '', 'g'
+                ), '[^0-9+]', '', 'g'
+            ) AS cleaned,
+            -- Extraction de l’indicatif
+            CASE
+                WHEN telephone ~ '^\+([0-9]{1,3})' THEN SUBSTRING(
+                    telephone
+                    FROM '^\+([0-9]{1,3})'
+                )
+                WHEN telephone ~ '^00([0-9]{1,3})' THEN SUBSTRING(
+                    telephone
+                    FROM '^00([0-9]{1,3})'
+                )
+                ELSE '41'
+            END AS indicatif,
+            -- Extraction du reste du numéro (sans indicatif)
+            CASE
+                WHEN telephone ~ '^\+([0-9]{1,3})([0-9]+)' THEN SUBSTRING(
+                    telephone
+                    FROM '^\+[0-9]{1,3}([0-9]+)'
+                )
+                WHEN telephone ~ '^00([0-9]{1,3})([0-9]+)' THEN SUBSTRING(
+                    telephone
+                    FROM '^00[0-9]{1,3}([0-9]+)'
+                )
+                ELSE LTRIM(
+                    REGEXP_REPLACE(
+                        REGEXP_REPLACE(
+                            telephone, 'x[0-9]+$', '', 'g'
+                        ), '[^0-9]', '', 'g'
+                    ), '0'
+                )
+            END AS rest
+        FROM temp_personne
+    ) AS nettoye;
