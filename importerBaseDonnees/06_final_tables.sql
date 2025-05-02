@@ -75,7 +75,8 @@ create table rendez_vous (
 create table patient_rdv_historique (
     id serial primary key,
     patient_id integer references patient (id) not null,
-    rdv_id integer references rendez_vous (id) not null
+    rdv_id integer references rendez_vous (id) not null,
+    CONSTRAINT unique_patient_rdv UNIQUE (patient_id, rdv_id)
 );
 
 /*creation prescription*/
