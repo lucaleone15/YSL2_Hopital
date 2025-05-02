@@ -1,4 +1,4 @@
--- Active: 1743084403060@@127.0.0.1@5432@hopital
+-- Active: 1743080852662@@127.0.0.1@5432@hopital
 /*//////////////////////////////////////////
 ********************************************
 ADRESSE
@@ -156,7 +156,7 @@ RENDEZ-VOUS
 ********************************************
 //////////////////////////////////////////*/
 INSERT INTO
-    rendez_vous (
+    rdv (
         id,
         medecin_id,
         rdv_date,
@@ -181,7 +181,7 @@ SELECT distinct
     temp_rdv.id,
     patient_id
 FROM temp_rdv
-    Inner join rendez_vous on temp_rdv.id = rendez_vous.id
+    Inner join rdv on temp_rdv.id = rdv.id
 where
     patient_id is not null;
 
@@ -193,7 +193,7 @@ PRESCRIPTION
 -- IMPORT DANS LA TABLE FINALE --
 INSERT INTO
     prescription (
-        rendezvous_id,
+        rdv_id,
         medicament_id,
         debut_traitement,
         fin_traitement
@@ -201,6 +201,6 @@ INSERT INTO
 SELECT t.rdv_id, t.medicament_id, rv.rdv_date, rv.rdv_date + t.duree * INTERVAL '1 day' AS fin_traitement
 FROM
     temp_prescription t
-    JOIN rendez_vous rv ON rv.id = t.rdv_id
+    JOIN rdv rv ON rv.id = t.rdv_id
 WHERE
     t.duree <= 365;
