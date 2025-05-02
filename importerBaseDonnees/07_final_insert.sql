@@ -5,28 +5,33 @@ ADRESSE
 ********************************************
 //////////////////////////////////////////*/
 --Ajouter les adresses
-insert into
+INSERT INTO
     adresse (
-        id
+        id,
         rue_et_num,
         code_postal,
         ville,
         etat,
         pays
     )
-select
-    id
-    TRIM(parties[1]) as rue_et_num,
-    TRIM(subparties[1]) as code_postal,
-    TRIM(subparties[2]) as ville,
-    TRIM(parties[3]) as etat,
-    TRIM(parties[4]) as pays
-from (
-        select string_to_array(nom, ', ') as parties, string_to_array(
-                (string_to_array(nom, ', ')) [2], ' '
-            ) as subparties
-        from temp_adresse
-    ) as temp
+SELECT
+    id,
+    TRIM(parties[1]) AS rue_et_num,
+    TRIM(
+        split_part(parties[2], ' ', 1)
+    ) AS code_postal,
+    TRIM(
+        SUBSTRING(
+            parties[2]
+            FROM POSITION(' ' IN parties[2]) + 1
+        )
+    ) AS ville,
+    TRIM(parties[3]) AS etat,
+    TRIM(parties[4]) AS pays
+FROM (
+        SELECT id, string_to_array(nom, ', ') AS parties
+        FROM temp_adresse
+    ) AS temp;
 
 /*//////////////////////////////////////////
 ********************************************
@@ -172,9 +177,11 @@ HISTORIQUE RENDEZ-VOUS
 //////////////////////////////////////////*/
 INSERT INTO
     patient_rdv_historique (rdv_id, patient_id)
-SELECT distinct temp_rdv.id, patient_id
+SELECT distinct
+    temp_rdv.id,
+    patient_id
 FROM temp_rdv
-Inner join rendez_vous on temp_rdv.id = rendez_vous.id
+    Inner join rendez_vous on temp_rdv.id = rendez_vous.id
 where
     patient_id is not null;
 
