@@ -1,4 +1,4 @@
--- Active: 1743080852662@@127.0.0.1@5432@hopital
+-- Active: 1743080737413@@127.0.0.1@5432@hopital
 /*//////////////////////////////////////////
 ********************************************
 ADRESSE
@@ -62,7 +62,7 @@ ASSURANCES
 //////////////////////////////////////////*/
 --Ajoute les assurances à la table finale et évite les duplicats de la meme assurance.
 INSERT INTO
-    assurance (id, assurance_nom)
+    assurance (id, nom)
 SELECT DISTINCT
     id,
     assurance_nom
@@ -75,7 +75,7 @@ MEDICAMENT
 //////////////////////////////////////////*/
 -- IMPORT DANS LA TABLE FINALE
 INSERT INTO
-    medicament (id, nom, dosage, med_type)
+    medicament (id, nom, dosage, type)
 SELECT
     id,
     nom,
@@ -138,7 +138,7 @@ INSERT INTO
         personne_id,
         assurance_id,
         adresse_id,
-        date_naiss,
+        date_naissance,
         complementaire
     )
 SELECT DISTINCT
@@ -159,7 +159,7 @@ INSERT INTO
     rdv (
         id,
         medecin_id,
-        rdv_date,
+        date,
         motif
     )
 SELECT
@@ -198,7 +198,7 @@ INSERT INTO
         debut_traitement,
         fin_traitement
     )
-SELECT t.rdv_id, t.medicament_id, rv.rdv_date, rv.rdv_date + t.duree * INTERVAL '1 day' AS fin_traitement
+SELECT t.rdv_id, t.medicament_id, rv.date, rv.date + t.duree * INTERVAL '1 day' AS fin_traitement
 FROM
     temp_prescription t
     JOIN rdv rv ON rv.id = t.rdv_id

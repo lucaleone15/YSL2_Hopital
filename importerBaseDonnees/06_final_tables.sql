@@ -1,4 +1,4 @@
--- Active: 1743080852662@@127.0.0.1@5432@hopital
+-- Active: 1743080737413@@127.0.0.1@5432@hopital
 /*creation adresse*/
 create table adresse (
     id serial primary key,
@@ -21,7 +21,7 @@ create table personne (
 /*creation assurance*/
 create table assurance (
     id serial primary key,
-    assurance_nom varchar(30) not null
+    nom varchar(30) not null
 );
 
 /*creation medoc*/
@@ -29,7 +29,7 @@ create table medicament (
     id serial primary key,
     nom varchar(30) not null,
     dosage varchar(10) not null,
-    med_type type_medicament not null
+    type type_medicament not null
 );
 
 /*creation specialisation medecin*/
@@ -59,7 +59,7 @@ create table patient (
     personne_id integer references personne (id) not null,
     assurance_id integer references assurance (id) not null,
     adresse_id integer references adresse (id) not null,
-    date_naiss date not null,
+    date_naissance date not null,
     complementaire boolean not null
 );
 
@@ -67,7 +67,7 @@ create table patient (
 create table rdv (
     id serial primary key,
     medecin_id integer references medecin (id) not null,
-    rdv_date date not null,
+    date date not null,
     motif type_rdv not null
 );
 
