@@ -89,7 +89,7 @@ SPÉCIALISATION
 ********************************************
 //////////////////////////////////////////*/
 INSERT INTO
-    specialisation (id, specialisation_nom)
+    specialisation (id, nom)
 SELECT id, specialisation_nom
 from temp_specialisation;
 

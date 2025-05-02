@@ -35,7 +35,7 @@ create table medicament (
 /*creation specialisation medecin*/
 create table specialisation (
     id SERIAL PRIMARY KEY,
-    specialisation_nom VARCHAR(30) NOT NULL
+    nom VARCHAR(30) NOT NULL
 );
 
 /*creation hopital*/
