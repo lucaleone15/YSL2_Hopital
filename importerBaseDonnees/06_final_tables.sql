@@ -1,4 +1,4 @@
--- Active: 1743084403060@@127.0.0.1@5432@hopital
+-- Active: 1743080852662@@127.0.0.1@5432@hopital
 /*creation adresse*/
 create table adresse (
     id serial primary key,
@@ -35,7 +35,7 @@ create table medicament (
 /*creation specialisation medecin*/
 create table specialisation (
     id SERIAL PRIMARY KEY,
-    specialisation_nom VARCHAR(30) NOT NULL
+    nom VARCHAR(30) NOT NULL
 );
 
 /*creation hopital*/
@@ -64,7 +64,7 @@ create table patient (
 );
 
 /*creation rdv*/
-create table rendez_vous (
+create table rdv (
     id serial primary key,
     medecin_id integer references medecin (id) not null,
     rdv_date date not null,
@@ -75,13 +75,14 @@ create table rendez_vous (
 create table patient_rdv_historique (
     id serial primary key,
     patient_id integer references patient (id) not null,
-    rdv_id integer references rendez_vous (id) not null
+    rdv_id integer references rdv (id) not null,
+    CONSTRAINT unique_patient_rdv UNIQUE (patient_id, rdv_id)
 );
 
 /*creation prescription*/
 CREATE TABLE prescription (
     id SERIAL PRIMARY KEY,
-    rendezvous_id INTEGER REFERENCES rendez_vous (id) NOT NULL,
+    rdv_id INTEGER REFERENCES rdv (id) NOT NULL,
     medicament_id INTEGER REFERENCES medicament (id) NOT NULL,
     debut_traitement DATE NOT NULL,
     fin_traitement DATE NOT NULL
