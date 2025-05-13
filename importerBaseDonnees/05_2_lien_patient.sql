@@ -32,3 +32,6 @@ FROM temp_personne pers
 WHERE
     pers.nom = tp.nom
     AND pers.prenom = tp.prenom;
+
+
+select * from assurance;
