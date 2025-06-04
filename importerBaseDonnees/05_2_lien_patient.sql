@@ -34,4 +34,3 @@ WHERE
     AND pers.prenom = tp.prenom;
 
 
-select * from assurance;

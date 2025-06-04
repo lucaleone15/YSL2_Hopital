@@ -5,6 +5,7 @@ SELECT  * from patient inner join assurance on assurance.id = patient.assurance_
 
 SELECT * FROM assurance;
 
+
 DELETE FROM assurance where assurance.id not in (select assurance_id from patient);
 
 select * from temp_specialisation;
