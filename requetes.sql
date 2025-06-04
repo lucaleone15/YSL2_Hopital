@@ -1,4 +1,3 @@
--- Active: 1743080737413@@127.0.0.1@5432@hopital
 --Affiche le nombre de prescription par patient
 SELECT CONCAT(personne.prenom, ' ', personne.nom) AS patient, COUNT(prescription.id) AS nombre_prescriptions
 FROM prescription
