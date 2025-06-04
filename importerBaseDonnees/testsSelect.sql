@@ -1,6 +1,12 @@
 -- Active: 1743084403060@@127.0.0.1@5432@hopital
 select * from temp_medecin;
 
+SELECT  * from patient inner join assurance on assurance.id = patient.assurance_id;
+
+SELECT * FROM assurance;
+
+DELETE FROM assurance where assurance.id not in (select assurance_id from patient);
+
 select * from temp_specialisation;
 
 select * from temp_rdv;

@@ -53,13 +53,15 @@ where
 --Ajout des données d'assurance. Ajoute uniquement les noms d'assurances des personnes avec complémentaire (d'ou le +)
 INSERT INTO
     temp_assurance (assurance_nom)
-select DISTINCT
-    TRIM(
-        (
-            string_to_array(assurance, '+')
-        ) [1]
-    ) as assurance
-from temp_patient;
+SELECT DISTINCT
+    TRIM(SPLIT_PART(assurance, '+', 1)) AS assurance
+FROM temp_patient
+WHERE
+    assurance LIKE '%+%'
+    AND TRIM(SPLIT_PART(assurance, '+', 1)) NOT IN (
+        SELECT assurance_nom
+        FROM temp_assurance
+    );
 
 --Ajout dans specialisation
 INSERT INTO
