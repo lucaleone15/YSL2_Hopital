@@ -1,12 +1,50 @@
 -- Active: 1743084403060@@127.0.0.1@5432@hopital
 select * from temp_medecin;
 
-SELECT  * from patient inner join assurance on assurance.id = patient.assurance_id;
+SELECT *
+from patient
+    inner join assurance on assurance.id = patient.assurance_id;
 
 SELECT * FROM assurance;
 
+SELECT count(personne.id) as "nombre de personnes"/*, nom, prenom, telephone , date*/
+FROM personne
+    /*INNER JOIN medecin ON medecin.personne_id = personne.id
+    INNER JOIN patient_rdv_historique ON patient.id = patient_rdv_historique.patient_id
+    INNER JOIN rdv ON rdv.id = patient_rdv_historique.rdv_id
+ORDER BY nom, prenom, telephone, personne.id*/;
+
+SELECT personne.id, nom, prenom, telephone /*, date*/
+FROM personne
+WHERE
+    id NOT IN (
+        SELECT personne_id
+        from medecin
+    )
+    AND id NOT IN (
+        SELECT personne_id
+        from patient
+    );
+
+DELETE FROM personne
+WHERE
+    id NOT IN (
+        SELECT personne_id
+        from medecin
+    )
+    AND id NOT IN (
+        SELECT personne_id
+        from patient
+    );
+
 select * from rdv;
-DELETE FROM assurance where assurance.id not in (select assurance_id from patient);
+
+DELETE FROM assurance
+where
+    assurance.id not in (
+        select assurance_id
+        from patient
+    );
 
 select * from temp_specialisation;
 

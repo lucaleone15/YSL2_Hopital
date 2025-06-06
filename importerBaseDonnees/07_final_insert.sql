@@ -52,7 +52,15 @@ SELECT DISTINCT
     prenom,
     telephone,
     sexe
-from temp_personne;
+from temp_personne
+    /*WHERE NOT EXISTS(
+    SELECT
+    nom,
+    prenom,
+    telephone,
+    sexe
+    FROM personne
+    )*/;
 
 /*//////////////////////////////////////////
 ********************************************
@@ -123,7 +131,12 @@ select
     personne_id,
     hopital_id,
     specialisation_id
-from temp_medecin;
+from temp_medecin
+    /*WHERE NOT EXISTS(
+    SELECT
+    personne_id
+    FROM patient
+    )*/;
 
 /*//////////////////////////////////////////
 ********************************************
@@ -147,7 +160,12 @@ SELECT DISTINCT
     adresse_id,
     date_naiss,
     complementaire
-FROM temp_patient;
+FROM temp_patient
+    /*WHERE NOT EXISTS(
+    SELECT
+    personne_id
+    FROM patient
+    )*/;
 
 /*//////////////////////////////////////////
 ********************************************
@@ -155,12 +173,7 @@ RENDEZ-VOUS
 ********************************************
 //////////////////////////////////////////*/
 INSERT INTO
-    rdv (
-        id,
-        medecin_id,
-        date,
-        motif
-    )
+    rdv (id, medecin_id, date, motif)
 SELECT
     temp_rdv.id,
     medecin_id,
@@ -182,7 +195,8 @@ SELECT distinct
 FROM temp_rdv
     Inner join rdv on temp_rdv.id = rdv.id
 where
-    patient_id is not null;
+    patient_id is not null
+    /*AND patient.id = temp_rdv.patient_id*/;
 
 /*//////////////////////////////////////////
 ********************************************
@@ -198,8 +212,23 @@ INSERT INTO
         fin_traitement
     )
 SELECT t.rdv_id, t.medicament_id, rv.date, rv.date + t.duree * INTERVAL '1 day' AS fin_traitement
-FROM
-    temp_prescription t
+FROM temp_prescription t
     JOIN rdv rv ON rv.id = t.rdv_id
 WHERE
     t.duree <= 365;
+
+/*//////////////////////////////////////////////
+********************************************
+SUPPRESSION DES DOUBLONS (PERSONNES SANS LIENS)
+********************************************
+//////////////////////////////////////////////*/
+DELETE FROM personne
+WHERE
+    id NOT IN (
+        SELECT personne_id
+        from medecin
+    )
+    AND id NOT IN (
+        SELECT personne_id
+        from patient
+    );
