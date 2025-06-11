@@ -53,7 +53,9 @@ SELECT DISTINCT
     telephone,
     sexe
 from temp_personne
-    /*WHERE NOT EXISTS(
+    /*SCRIPT POUR AMÉLIORATION : 
+    
+    WHERE NOT EXISTS(
     SELECT
     nom,
     prenom,
@@ -132,7 +134,9 @@ select
     hopital_id,
     specialisation_id
 from temp_medecin
-    /*WHERE NOT EXISTS(
+    /*SCRIPT POUR AMÉLIORATION : 
+    
+    WHERE NOT EXISTS(
     SELECT
     personne_id
     FROM patient
@@ -161,7 +165,9 @@ SELECT DISTINCT
     date_naiss,
     complementaire
 FROM temp_patient
-    /*WHERE NOT EXISTS(
+    /*SCRIPT POUR AMÉLIORATION :
+    
+    WHERE NOT EXISTS(
     SELECT
     personne_id
     FROM patient
@@ -196,7 +202,9 @@ FROM temp_rdv
     Inner join rdv on temp_rdv.id = rdv.id
 where
     patient_id is not null
-    /*AND patient.id = temp_rdv.patient_id*/;
+    /*SCRIPT POUR AMÉLIORATION : 
+    
+    AND patient.id = temp_rdv.patient_id*/;
 
 /*//////////////////////////////////////////
 ********************************************
